@@ -1,0 +1,176 @@
+/* Shared connection page styles — used by all module connection pages */
+
+.connection-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-base);
+}
+
+/* Top bar */
+.conn-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+}
+
+.conn-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+.conn-back-btn:hover { background: rgba(255,255,255,0.06); color: var(--text-primary); }
+
+.conn-topbar-divider { width: 1px; height: 20px; background: var(--border-subtle); }
+
+.conn-topbar-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.conn-series-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Main layout */
+.conn-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* Left panel */
+.conn-panel-left {
+  border-right: 1px solid var(--border-subtle);
+  padding: 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.conn-panel-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.conn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conn-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.conn-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Right panel */
+.conn-panel-right {
+  padding: 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conn-recent-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  gap: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  flex: 1;
+}
+
+.conn-recent-empty-icon { font-size: 36px; opacity: 0.4; }
+.conn-recent-empty p { font-size: 13px; }
+
+/* Recent connection card */
+.recent-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--transition-normal);
+  animation: card-enter 0.3s ease both;
+}
+.recent-card:hover { border-color: var(--border-normal); background: var(--bg-card-hover); }
+
+.recent-card-icon {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.recent-card-info { flex: 1; min-width: 0; }
+.recent-card-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recent-card-detail { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.recent-card-date { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+.recent-card-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+/* Result banner */
+.conn-result {
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  animation: card-enter 0.2s ease both;
+}
+.conn-result-success { background: rgba(0,224,161,0.10); border: 1px solid rgba(0,224,161,0.25); color: var(--accent-success); }
+.conn-result-error   { background: rgba(255,77,106,0.10); border: 1px solid rgba(255,77,106,0.25); color: var(--accent-danger); }
+.conn-result-info    { background: rgba(0,180,255,0.08);  border: 1px solid rgba(0,180,255,0.20);  color: var(--accent-primary); }

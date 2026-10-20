@@ -1,0 +1,18 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": ["electron.vite.config.*", "electron/**/*"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "resolveJsonModule": true,
+    "outDir": "out"
+  }
+}

@@ -1,0 +1,139 @@
+.tu-playback-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pb-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pb-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.pb-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.pb-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.pb-action-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.pb-badge {
+  background: rgba(124, 94, 245, 0.15);
+  color: var(--color-tu);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid rgba(124, 94, 245, 0.3);
+}
+
+.pb-playback-area {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.pb-playback-area.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pb-playback-area h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.pb-select-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pb-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 16px;
+  outline: none;
+  min-width: 150px;
+}
+
+.pb-select:focus {
+  border-color: var(--color-tu);
+}
+
+.pb-last-played {
+  font-size: 14px;
+  color: var(--color-tu);
+  font-weight: 500;
+  margin-bottom: 24px;
+  background: rgba(124, 94, 245, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.pb-media-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.pb-media-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pb-media-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pb-media-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.pb-media-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

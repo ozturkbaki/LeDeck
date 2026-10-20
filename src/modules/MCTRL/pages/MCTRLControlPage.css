@@ -1,0 +1,221 @@
+.mctrl-control-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mctrl-ctrl-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mctrl-ctrl-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.mctrl-ctrl-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px 24px;
+  transition: box-shadow 0.2s;
+}
+
+.mctrl-ctrl-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.mctrl-ctrl-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.mctrl-ctrl-card-icon {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 166, 35, 0.12);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.mctrl-ctrl-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mctrl-ctrl-card-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.mctrl-refresh-inline {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Brightness */
+.mctrl-brightness-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mctrl-brightness-value {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.mctrl-brightness-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.mctrl-brightness-unit {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.mctrl-slider {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--color-mctrl, #f5a623);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.mctrl-slider:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.mctrl-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.mctrl-brightness-raw {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Placeholder */
+.mctrl-ctrl-card-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.mctrl-ctrl-placeholder-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Input Source */
+.mctrl-mode-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.mctrl-mode-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-muted);
+}
+
+.mctrl-mode-toggle:hover:not(:disabled) {
+  border-color: var(--color-mctrl, #f5a623);
+  color: var(--text-primary);
+}
+
+.mctrl-mode-toggle.manual {
+  background: rgba(245, 166, 35, 0.1);
+  border-color: rgba(245, 166, 35, 0.4);
+  color: var(--color-mctrl, #f5a623);
+  font-weight: 600;
+}
+
+.mctrl-source-active-label {
+  color: var(--color-mctrl, #f5a623);
+  font-weight: 700;
+}
+
+.mctrl-source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mctrl-source-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--bg-secondary, rgba(255,255,255,0.04));
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.mctrl-source-btn:hover:not(:disabled) {
+  border-color: rgba(245,166,35,0.45);
+  background: rgba(245,166,35,0.08);
+  transform: translateY(-1px);
+}
+
+.mctrl-source-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mctrl-source-btn-active {
+  border-color: var(--color-mctrl, #f5a623) !important;
+  background: rgba(245,166,35,0.14) !important;
+  color: var(--color-mctrl, #f5a623);
+  font-weight: 700;
+}
+
+.mctrl-source-check {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 11px;
+  color: var(--color-mctrl, #f5a623);
+}
